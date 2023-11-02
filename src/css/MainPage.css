@@ -1,0 +1,115 @@
+
+.sectionTitle-container-items {
+    position: relative;
+    top: 25%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin: auto;
+}
+
+.sectionTitle-container {
+    width: auto;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(0deg, rgba(10,15,23,1) 0%, rgba(83,95,252,1) 100%);
+}
+
+.sectionTitle-text > h1 {
+    width: 38vw;
+    color: aliceblue;
+    margin: 0;
+    font-size: 70px;
+    text-align: center;
+}
+
+.sectionTitle-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sectionTitle-text-buttons {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 150px;
+}
+
+.sectionTitle-text-buttons > a {
+    text-decoration: none;
+    background-color: transparent;
+    border: white 1px solid;
+    color: aliceblue;
+    border-radius: 5px;
+    padding: 30px 100px;
+    
+}
+
+.sectionTitle-text-buttons > a + a {
+    margin-left: 50px;
+}
+
+.sectionTitle-text-buttons > a:hover {
+    background-color: white; 
+    color: #0A0F17;
+}
+
+.sectionAbout-container {
+    width: auto;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border-top: grey 1px solid;
+    background-color: #0A0F17;
+}
+
+.sectionAbout-container-items {
+    display: flex;
+    flex-direction: row;
+}
+
+.sectionAbout-container-items-img {
+    width: 50vw;
+    height: 100vh;
+    background-color: black; 
+    overflow: hidden;
+}
+
+.sectionAbout-container-items-img > img {
+    width: 100%;
+}
+
+.sectionAbout-container-items-text  {
+    position: relative;
+    margin: auto 5vw;
+}
+
+.sectionAbout-container-items-title > h2 {
+
+    padding: 10px 0.7vw;
+    color: #535efc;
+    border: #535efc73 solid 1px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 12px;
+    background-color: #535efc1e;
+    width: 60px;
+
+}
+
+.sectionAbout-container-items-p > p{
+    margin: 0;
+    width: 35vw;
+    height: auto;
+    color: whitesmoke;
+    font-size: 15px;
+}
+
+.sectionAbout-container-items-desc > h2 {
+    font-size: 50px;
+    margin: 20px 0 ;
+    margin-top: 10px;
+    color: white;
+}
