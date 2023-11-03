@@ -163,6 +163,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    width: 100%;
     transition: opacity 0.5s ease;
     opacity: 0;
 }
@@ -187,7 +188,7 @@
 }
 
 .workTag-container:hover img {
-    opacity: 0.2; /* Difumina la imagen */
+    opacity: 0.1; /* Difumina la imagen */
 }
 
 .workTag-container:hover .workTag-container-items {

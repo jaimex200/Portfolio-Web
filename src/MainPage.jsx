@@ -1,6 +1,9 @@
 import './css/MainPage.css'
 import aboutImg from './assets/aboutPhoto1.png'
-import workTagImg from './assets/aboutPhoto.jpg'
+import MSImg from './assets/MS.jpg'
+import PixelwareImg from './assets/Pixelware.jpg'
+import PortfolioWebImg from './assets/PortfolioWeb.jpg'
+import TFGImg from './assets/TFG.jpg'
 
 export function MainPage() {
     return (
@@ -74,10 +77,10 @@ export function SectionWork() {
                     <ButtonTitle textPrint={"Trabajo"}></ButtonTitle>
                     <h2>Mi trayectoria profesional y proyectos</h2>
                     <div className='sectionWork-container-items-work'>
-                        <WorkTag></WorkTag>
-                        <WorkTag></WorkTag>
-                        <WorkTag></WorkTag>
-                        <WorkTag></WorkTag>
+                        <WorkTag date={'Octubre 2022 - Actualidad'} job={'Consultor de Tecnologia'} img={MSImg}></WorkTag>
+                        <WorkTag date={'Octubre 2021 - Febrero 2022'} job={'Resolucion de Incidencias'} img={PixelwareImg}></WorkTag>
+                        <WorkTag date={'Nobiembre 2023 - Actualidad'} job={'Mi Portfolio con React'} img={PortfolioWebImg}></WorkTag>
+                        <WorkTag date={'Marzo 2022 - Diciembre 2022'} job={'Herramienta de inversion con IA'} img={TFGImg}></WorkTag>
                     </div>
                 </div>
             </section>
@@ -85,15 +88,15 @@ export function SectionWork() {
     )
 }
 
-export function WorkTag() {
+export function WorkTag({date = '', job = 'Proximamente', img}) {
     return (
         <div className='workTag-container'>
             <div className='workTag-container-items'>
-                <span>Octubre 2022 - Actualidad</span>
-                <h3>Management Solutions</h3>
+                <span>{date}</span>
+                <h3>{job}</h3>
                 {/*poner etiquetas*/}
             </div>
-            <img src={workTagImg} alt="" />
+            <img src={img} alt="" />
         </div>
     )
 }
