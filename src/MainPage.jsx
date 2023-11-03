@@ -1,4 +1,6 @@
 import './css/MainPage.css'
+import aboutImg from './assets/aboutPhoto1.png'
+import workTagImg from './src/assets/aboutPhoto.jpg'
 
 export function MainPage() {
     return (
@@ -38,7 +40,7 @@ export function SectionAbout() {
             <section className='sectionAbout-container'>
                 <div className='sectionAbout-container-items'>
                     <div className='sectionAbout-container-items-img'>
-                        <img src="./src/assets/aboutPhoto1.png" alt="" />
+                        <img src={aboutImg} alt="" />
                     </div>
                     <div className='sectionAbout-container-items-text'>
                         <ButtonTitle textPrint={"SOBRE MI"}></ButtonTitle>
@@ -91,7 +93,7 @@ export function WorkTag() {
                 <h3>Management Solutions</h3>
                 {/*poner etiquetas*/}
             </div>
-            <img src="./src/assets/aboutPhoto.jpg" alt="" />
+            <img src={workTagImg} alt="" />
         </div>
     )
 }
