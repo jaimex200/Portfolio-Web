@@ -79,8 +79,8 @@ export function SectionWork() {
                     <div className='sectionWork-container-items-work'>
                         <WorkTag date={'Octubre 2022 - Actualidad'} job={'Consultor de Tecnologia'} img={MSImg}></WorkTag>
                         <WorkTag date={'Octubre 2021 - Febrero 2022'} job={'Resolucion de Incidencias'} img={PixelwareImg}></WorkTag>
-                        <WorkTag date={'Nobiembre 2023 - Actualidad'} job={'Mi Portfolio con React'} img={PortfolioWebImg}></WorkTag>
-                        <WorkTag date={'Marzo 2022 - Diciembre 2022'} job={'Herramienta de inversion con IA'} img={TFGImg}></WorkTag>
+                        <WorkTag date={'Noviembre 2023 - Actualidad'} job={'Mi Portfolio con React'} img={PortfolioWebImg}></WorkTag>
+                        <WorkTag date={'Marzo 2022 - Diciembre 2022'} job={'Herramienta de Inversion con IA'} img={TFGImg}></WorkTag>
                     </div>
                 </div>
             </section>
