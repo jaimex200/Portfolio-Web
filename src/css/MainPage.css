@@ -79,6 +79,8 @@
 
 .sectionAbout-container-items-img > img {
     width: 100%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 .sectionAbout-container-items-text  {
