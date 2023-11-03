@@ -1,6 +1,6 @@
 import './css/MainPage.css'
 import aboutImg from './assets/aboutPhoto1.png'
-import workTagImg from './src/assets/aboutPhoto.jpg'
+import workTagImg from './assets/aboutPhoto.jpg'
 
 export function MainPage() {
     return (
