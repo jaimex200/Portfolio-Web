@@ -6,6 +6,7 @@ export function MainPage() {
             <div className='mainPage-container'>
                 <SectionTitle></SectionTitle>
                 <SectionAbout></SectionAbout>
+                <SectionWork></SectionWork>
             </div>
         </>
     )
@@ -40,9 +41,7 @@ export function SectionAbout() {
                         <img src="./src/assets/aboutPhoto1.png" alt="" />
                     </div>
                     <div className='sectionAbout-container-items-text'>
-                        <div className='sectionAbout-container-items-title'>
-                            <h2>SOBRE MI</h2>
-                        </div>
+                        <ButtonTitle textPrint={"SOBRE MI"}></ButtonTitle>
                         <div className='sectionAbout-container-items-desc'>
                             <h2>Desarrollador</h2>
                         </div>
@@ -54,5 +53,45 @@ export function SectionAbout() {
                 </div>
             </section>
         </>
+    )
+}
+
+export function ButtonTitle({textPrint}) {
+    return (
+        <div className='sectionAbout-container-items-title'>
+            <h2>{textPrint}</h2>
+        </div>
+    )
+}
+
+export function SectionWork() {
+    return (
+        <>
+            <section className='sectionWork-container'>
+                <div className='sectionWork-container-items'>
+                    <ButtonTitle textPrint={"Trabajo"}></ButtonTitle>
+                    <h2>Mi trayectoria profesional y proyectos</h2>
+                    <div className='sectionWork-container-items-work'>
+                        <WorkTag></WorkTag>
+                        <WorkTag></WorkTag>
+                        <WorkTag></WorkTag>
+                        <WorkTag></WorkTag>
+                    </div>
+                </div>
+            </section>
+        </>
+    )
+}
+
+export function WorkTag() {
+    return (
+        <div className='workTag-container'>
+            <div className='workTag-container-items'>
+                <span>Octubre 2022 - Actualidad</span>
+                <h3>Management Solutions</h3>
+                {/*poner etiquetas*/}
+            </div>
+            <img src="./src/assets/aboutPhoto.jpg" alt="" />
+        </div>
     )
 }

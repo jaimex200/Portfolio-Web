@@ -95,7 +95,7 @@
     text-align: center;
     font-size: 12px;
     background-color: #535efc1e;
-    width: 60px;
+    width: 90px;
 
 }
 
@@ -112,4 +112,84 @@
     margin: 20px 0 ;
     margin-top: 10px;
     color: white;
+}
+
+.sectionWork-container {
+    width: auto;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border-top: grey 1px solid;
+    background-color: #0A0F17;
+}
+
+.sectionWork-container-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12vh;
+}
+
+.sectionWork-container-items > h2 {
+    color: white;
+    font-size: 40px;
+    margin-top: 4vh;
+    margin-bottom: 0;
+}   
+
+.sectionWork-container-items-work {
+    display: flex;
+    margin-top: 0px;
+}
+
+.workTag-container {
+    width: 300px;
+    height: 450px;
+    background-color: transparent;
+    margin: 8vh 2vw;
+    border-radius: 10px;
+    border: 1px solid white;
+    color: white;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.workTag-container-items {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.workTag-container-items > span{
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.workTag-container-items > h3{
+    margin: 0;
+    font-size: 30px;
+    text-align: center;
+}
+
+.workTag-container img {
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease;
+    object-fit: cover; /* Asegúrate de que la imagen cubra toda el área sin estirarse */
+}
+
+.workTag-container:hover img {
+    opacity: 0.2; /* Difumina la imagen */
+}
+
+.workTag-container:hover .workTag-container-items {
+    opacity: 1; /* Muestra la información */
 }
