@@ -1,5 +1,5 @@
 import './css/MainPage.css'
-import aboutImg from './assets/aboutPhoto1.png'
+import aboutImg from './assets/aboutPhoto2.jpg'
 import MSImg from './assets/MS.jpg'
 import PixelwareImg from './assets/Pixelware.jpg'
 import PortfolioWebImg from './assets/PortfolioWeb.jpg'
@@ -72,25 +72,6 @@ export function ButtonTitle({textPrint}) {
         <div className='sectionAbout-container-items-title'>
             <h2>{textPrint}</h2>
         </div>
-    )
-}
-
-export function SectionWork() {
-    return (
-        <>
-            <section className='sectionWork-container'>
-                <div className='sectionWork-container-items'>
-                    <ButtonTitle textPrint={"Trabajo"}></ButtonTitle>
-                    <h2>Mi trayectoria profesional y proyectos</h2>
-                    <div className='sectionWork-container-items-work'>
-                        <WorkTag date={'Octubre 2022 - Actualidad'} job={'Consultor de Tecnologia'} img={MSImg}></WorkTag>
-                        <WorkTag date={'Octubre 2021 - Febrero 2022'} job={'Resolucion de Incidencias'} img={PixelwareImg}></WorkTag>
-                        <WorkTag date={'Noviembre 2023 - Actualidad'} job={'Mi Portfolio con React'} img={PortfolioWebImg}></WorkTag>
-                        <WorkTag date={'Marzo 2022 - Diciembre 2022'} job={'Herramienta de Inversion con IA'} img={TFGImg}></WorkTag>
-                    </div>
-                </div>
-            </section>
-        </>
     )
 }
 
