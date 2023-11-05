@@ -1,6 +1,6 @@
 .navBar-nav {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     z-index: 9999;
 }
 
@@ -13,9 +13,7 @@
     border-radius: 100px;
     background-color: #0a0f17c9;
     backdrop-filter: blur(10px);
-
 }
-
 
 .navbar-pages {
     list-style-type: none;
@@ -61,5 +59,17 @@
     border: white 1px solid;
     padding: 10px 15px;
     color: white;
+}
+
+@media (max-width: 767px) {
+    .navbar-pages {
+        visibility: hidden;
+        width: 0;
+    }
+
+    .navbar-section-button {
+        visibility: hidden;
+        width: 0;
+    }
 }
 
