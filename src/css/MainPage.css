@@ -261,7 +261,22 @@
     .sectionAbout-container-items-p  > p{
         width: 100%;
     }
-    
+
+    .carrusel-slide {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .carrusel-slide > .workTag-container {
+        margin-top: 30px;
+    }
+
+    .sectionWork-container {
+        height: auto;
+    }
+
+
 }
 
 .carrusel-container {

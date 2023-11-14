@@ -54,6 +54,7 @@
 }
 
 .navbar-button {
+    text-decoration: none;
     border-radius: 20px;
     background-color: transparent;
     border: white 1px solid;

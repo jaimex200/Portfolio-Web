@@ -13,7 +13,7 @@ export function NavBar() {
             </ul>
             <div className='navbar-name'><strong>JAIME</strong>MUÑOZ</div>
             <div className='navbar-section-button'>
-              <button className='navbar-button'>Contactame</button>
+              <a href='mailto:jlopezbarajas@gmail.com' className='navbar-button'>Contactame</a>
             </div>
           </div>
         </nav>
