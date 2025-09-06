@@ -1,0 +1,348 @@
+/* About Section Styles */
+.about {
+  padding: var(--spacing-4xl) 0;
+  background-color: var(--color-bg-primary);
+  position: relative;
+}
+
+.about__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.about__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-4xl);
+  align-items: center;
+}
+
+/* Contenido de texto */
+.about__text {
+  order: 1;
+}
+
+.about__tag {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  background-color: rgba(37, 99, 235, 0.1);
+  border-radius: var(--border-radius-full);
+  margin-bottom: var(--spacing-lg);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.about__title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xl);
+  line-height: var(--line-height-tight);
+}
+
+.about__description {
+  margin-bottom: var(--spacing-xl);
+}
+
+.about__description p {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-lg);
+}
+
+.about__description p:last-child {
+  margin-bottom: 0;
+}
+
+.about__description strong {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Highlights */
+.about__highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.about__highlight {
+  text-align: center;
+  padding: var(--spacing-lg);
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-secondary) 0%,
+    var(--color-bg-tertiary) 100%
+  );
+  border-radius: var(--border-radius-xl);
+  border: 1px solid rgba(226, 232, 240, 0.5);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.about__highlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-accent)
+  );
+  transform: scaleX(0);
+  transition: transform var(--transition-normal);
+}
+
+.about__highlight:hover::before {
+  transform: scaleX(1);
+}
+
+.about__highlight:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.about__highlight-number {
+  display: block;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.about__highlight-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Imagen */
+.about__image {
+  order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__image-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.about__image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.about__image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.2) 0%,
+    rgba(16, 185, 129, 0.2) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.about__image-container:hover img {
+  transform: scale(1.05);
+}
+
+.about__image-container:hover .about__image-overlay {
+  opacity: 1;
+}
+
+/* Decoración de fondo */
+.about::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(37, 99, 235, 0.1) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.about::after {
+  content: '';
+  position: absolute;
+  bottom: 20%;
+  left: -10%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(16, 185, 129, 0.1) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about__content {
+    gap: var(--spacing-3xl);
+  }
+
+  .about__highlights {
+    gap: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .about__content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+    text-align: center;
+  }
+
+  .about__text {
+    order: 2;
+  }
+
+  .about__image {
+    order: 1;
+  }
+
+  .about__title {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .about__description p {
+    font-size: var(--font-size-base);
+  }
+
+  .about__highlights {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .about__highlight {
+    padding: var(--spacing-md);
+  }
+
+  .about__highlight-number {
+    font-size: var(--font-size-2xl);
+  }
+
+  .about__image-container {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .about__title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .about__description p {
+    font-size: var(--font-size-sm);
+  }
+
+  .about__image-container {
+    max-width: 250px;
+  }
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+  .about__highlight {
+    background: linear-gradient(
+      135deg,
+      var(--color-bg-secondary) 0%,
+      var(--color-bg-tertiary) 100%
+    );
+    border-color: rgba(51, 65, 85, 0.5);
+  }
+}
+
+/* Animaciones adicionales */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.about__highlight {
+  animation: fadeInScale 0.6s ease-out;
+}
+
+.about__highlight:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.about__highlight:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.about__highlight:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* Efecto de parallax sutil */
+@media (prefers-reduced-motion: no-preference) {
+  .about__image-container {
+    transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+    transition: transform var(--transition-slow);
+  }
+
+  .about__image-container:hover {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+  }
+}
+
+/* Estados de loading para imagen */
+.about__image-container img {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
