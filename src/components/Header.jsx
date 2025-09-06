@@ -37,7 +37,7 @@ const Header = ({ currentSection, setCurrentSection }) => {
       <div className="header__container">
         <div className="header__logo" onClick={() => scrollToSection('home')}>
           <span className="header__logo-text">Jaime Muñoz</span>
-          <span className="header__logo-subtitle">Data Engineer</span>
+          <span className="header__logo-subtitle">Software Engineer</span>
         </div>
 
         <nav className={`header__nav ${isMenuOpen ? 'header__nav--open' : ''}`}>

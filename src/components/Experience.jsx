@@ -2,6 +2,7 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { MapPin, Calendar, Users, Award } from 'lucide-react'
 import MSImg from '../assets/MS.jpg'
+import LynxImg from '../assets/LynxTech.jpg'
 import PixelwareImg from '../assets/Pixelware.jpg'
 import '../css/Experience.css'
 
@@ -12,9 +13,32 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
+      company: "Lynx Tech",
+      position: "Software Engineer (Backend)",
+      period: "Marzo 2024 - Actualidad",
+      location: "Madrid, España",
+      type: "Tiempo completo",
+      image: LynxImg,
+      responsibilities: [
+        "Desarrollo backend en C y Python, con scripting en Bash en entornos Linux",
+        "Diseño e implementación de pipelines de CI/CD principalmente con GitLab y uso puntual de Jenkins",
+        "Automatización de despliegues de aplicaciones en Docker, mejorando la reproducibilidad y facilidad de mantenimiento",
+        "Ejecución de tests unitarios con Google Test (C) y PyTest (Python)",
+        "Resolución de incidencias en entornos de producción críticos de banca (prevención de fraude)",
+        "Soporte directo a cliente, incluyendo monitorización de tres entornos y resolución de incidencias de primer nivel"
+      ],
+      achievements: [
+        "Implementación de despliegue en Docker de la aplicación core, habilitando un proceso de entrega más ágil y estandarizado",
+        "Mantenimiento proactivo en sistemas críticos de prevención de fraude, evitando caídas en entornos de producción bancarios",
+        "Participación en tareas de soporte al cliente, asegurando la continuidad de negocio en sistemas de alta disponibilidad"
+      ],
+      technologies: ["C", "Python", "Bash", "Linux", "Docker", "GitLab CI/CD", "Jenkins", "Google Test", "PyTest"]
+    },
+    {
+      id: 2,
       company: "Management Solutions",
       position: "Data Engineer Consultant",
-      period: "Octubre 2022 - Actualidad",
+      period: "Octubre 2022 - Marzo 2024",
       location: "Madrid, España",
       type: "Tiempo completo",
       image: MSImg,
@@ -36,7 +60,7 @@ const Experience = () => {
       technologies: ["Python", "SQL", "GLM", "ETL", "IFRS-17"]
     },
     {
-      id: 2,
+      id: 3,
       company: "Pixelware",
       position: "Desarrollador Junior Full Stack",
       period: "Octubre 2021 - Febrero 2022",

@@ -617,3 +617,37 @@
 .contact__form-submit:active {
   animation: pulse 0.3s ease-in-out;
 }
+
+/* Status messages */
+.contact__form-status {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-lg);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+  animation: slideIn 0.3s ease-out;
+}
+
+.contact__form-status.success {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.contact__form-status.error {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

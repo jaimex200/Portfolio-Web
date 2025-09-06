@@ -105,11 +105,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  max-width: 100%;
 }
 
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -121,6 +123,7 @@ body {
   background-color: var(--color-bg-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* Aplicación principal */
@@ -128,6 +131,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .main-content {
@@ -140,6 +145,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing-md);
+  box-sizing: border-box;
 }
 
 @media (min-width: 640px) {

@@ -42,20 +42,21 @@ const About = () => {
               transition={{ delay: 0.4, duration: 0.8 }}
             >
               <p>
-                Soy un <strong>Ingeniero Informático</strong> con enfoque especializado en 
-                <strong> Ingeniería de Datos e Inteligencia Artificial</strong>. Mi pasión por 
-                la tecnología me ha llevado a desarrollar una sólida base académica y una 
-                experiencia práctica diversa.
+                Soy un <strong>Software Engineer</strong> especializado en desarrollo backend 
+                con más de 4 años de experiencia en el sector tecnológico. Mi trayectoria 
+                abarca desde <strong>Data Engineering hasta desarrollo de software crítico</strong> 
+                en entornos bancarios.
               </p>
               <p>
-                Tengo un <strong>fuerte deseo de crecer y contribuir</strong> en proyectos 
-                tecnológicos innovadores. Me motiva especialmente la búsqueda de soluciones 
-                que combinen análisis de datos, automatización y desarrollo full stack.
+                Actualmente trabajo en <strong>Lynx Tech</strong> desarrollando soluciones backend 
+                en C y Python para sistemas críticos de prevención de fraude bancario. Mi experiencia 
+                incluye <strong>CI/CD, Docker, automatización</strong> y soporte en entornos de 
+                alta disponibilidad.
               </p>
               <p>
-                Busco formar parte de equipos donde pueda combinar mi pasión por la tecnología, 
-                mis conocimientos técnicos, y seguir aprendiendo de profesionales experimentados 
-                en un ambiente colaborativo y desafiante.
+                Busco seguir creciendo en proyectos desafiantes donde pueda aplicar mi experiencia 
+                en desarrollo backend, automatización y sistemas críticos, siempre con un enfoque 
+                en la calidad y la mejora continua.
               </p>
             </motion.div>
 
@@ -66,16 +67,16 @@ const About = () => {
               transition={{ delay: 0.5, duration: 0.8 }}
             >
               <div className="about__highlight">
-                <span className="about__highlight-number">3+</span>
+                <span className="about__highlight-number">4+</span>
                 <span className="about__highlight-text">Años de experiencia</span>
               </div>
               <div className="about__highlight">
-                <span className="about__highlight-number">15+</span>
+                <span className="about__highlight-number">20+</span>
                 <span className="about__highlight-text">Proyectos completados</span>
               </div>
               <div className="about__highlight">
-                <span className="about__highlight-number">2</span>
-                <span className="about__highlight-text">Idiomas</span>
+                <span className="about__highlight-number">3</span>
+                <span className="about__highlight-text">Empresas</span>
               </div>
             </motion.div>
           </div>

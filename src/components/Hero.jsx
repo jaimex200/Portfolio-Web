@@ -34,7 +34,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Jaime Muñoz López-Barajas
+            Jaime Muñoz
+            <span className="hero__name-full"> López-Barajas</span>
           </motion.h1>
           
           <motion.h2
@@ -43,7 +44,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            Data Engineer & Full Stack Developer
+            Software Engineer (Backend) & Data Engineer
           </motion.h2>
           
           <motion.p
@@ -52,8 +53,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
           >
-            Ingeniero Informático especializado en datos e IA. Apasionado por crear 
-            soluciones tecnológicas innovadoras que generen impacto real.
+            Software Engineer especializado en desarrollo backend con C y Python. 
+            Experiencia en sistemas críticos de banca, CI/CD, y automatización con Docker.
           </motion.p>
           
           <motion.div
@@ -92,17 +93,17 @@ const Hero = () => {
               <Mail size={24} />
             </a>
           </motion.div>
-        </motion.div>
-        
-        <motion.div
-          className="hero__scroll-indicator"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 0.8 }}
-          onClick={() => scrollToSection('about')}
-        >
-          <span>Conoce más</span>
-          <ArrowDown size={20} />
+
+          <motion.div
+            className="hero__scroll-indicator"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5, duration: 0.8 }}
+            onClick={() => scrollToSection('about')}
+          >
+            <span>Conoce más</span>
+            <ArrowDown size={20} />
+          </motion.div>
         </motion.div>
       </div>
     </section>

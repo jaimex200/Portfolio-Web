@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Download } from 'lucide-react'
+import emailjs from '@emailjs/browser'
 import '../css/Contact.css'
 
 const Contact = () => {
@@ -14,6 +15,7 @@ const Contact = () => {
     message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null) // 'success', 'error', null
 
   const handleChange = (e) => {
     setFormData({
@@ -25,14 +27,43 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Aquí irían las acciones para enviar el formulario
-    // Por ahora simulamos un envío
-    setTimeout(() => {
-      alert('Mensaje enviado correctamente. Te contactaré pronto!')
+    setSubmitStatus(null)
+
+    // Configuración de EmailJS
+    const serviceID = 'service_e8hbdjd' // Reemplazar con tu Service ID de EmailJS
+    const templateID = 'template_qkrafw6' // Reemplazar con tu Template ID de EmailJS
+    const publicKey = 'N8-jZt9gaNpKDnF3j' // Reemplazar con tu Public Key de EmailJS
+
+    try {
+      const result = await emailjs.send(
+        serviceID,
+        templateID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_name: 'Jaime Muñoz',
+        },
+        publicKey
+      )
+
+      console.log('Email enviado:', result.text)
+      setSubmitStatus('success')
       setFormData({ name: '', email: '', subject: '', message: '' })
+      
+      // Limpiar el estado de éxito después de 5 segundos
+      setTimeout(() => setSubmitStatus(null), 5000)
+
+    } catch (error) {
+      console.error('Error al enviar email:', error)
+      setSubmitStatus('error')
+      
+      // Limpiar el estado de error después de 5 segundos
+      setTimeout(() => setSubmitStatus(null), 5000)
+    } finally {
       setIsSubmitting(false)
-    }, 1000)
+    }
   }
 
   const contactInfo = [
@@ -280,6 +311,22 @@ const Contact = () => {
                   </>
                 )}
               </motion.button>
+
+              {/* Mensajes de estado */}
+              {submitStatus && (
+                <motion.div
+                  className={`contact__form-status ${submitStatus === 'success' ? 'success' : 'error'}`}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                >
+                  {submitStatus === 'success' ? (
+                    <span>✅ ¡Mensaje enviado correctamente! Te contactaré pronto.</span>
+                  ) : (
+                    <span>❌ Error al enviar el mensaje. Por favor, inténtalo de nuevo o contacta directamente por email.</span>
+                  )}
+                </motion.div>
+              )}
             </form>
           </motion.div>
         </div>

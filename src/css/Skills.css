@@ -266,15 +266,6 @@
   transition: opacity var(--transition-normal);
 }
 
-.skills__soft-item:hover::before {
-  opacity: 1;
-}
-
-.skills__soft-item:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-xl);
-}
-
 .skills__soft-icon {
   display: flex;
   align-items: center;
