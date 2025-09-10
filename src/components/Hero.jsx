@@ -86,7 +86,7 @@ const Hero = () => {
             <a href="https://github.com/jaimex200" target="_blank" rel="noopener noreferrer" className="hero__social-link">
               <Github size={24} />
             </a>
-            <a href="https://linkedin.com/in/jaime-muñoz-lópez-barajas" target="_blank" rel="noopener noreferrer" className="hero__social-link">
+            <a href="https://www.linkedin.com/in/jaime-munoz-lopez-barajas2000/" target="_blank" rel="noopener noreferrer" className="hero__social-link">
               <Linkedin size={24} />
             </a>
             <a href="mailto:jlopezbarajas@gmail.com" className="hero__social-link">

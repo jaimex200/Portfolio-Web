@@ -24,6 +24,19 @@ const Contact = () => {
     })
   }
 
+  const handleDownloadCV = () => {
+    // Opción 1: Archivo PDF estático
+    const link = document.createElement('a')
+    link.href = '/cv-jaime-munoz.pdf'  // Archivo temporal de prueba
+    link.download = 'CV-Jaime-Munoz-Lopez-Barajas.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+    
+    // Opcional: Google Analytics event
+    // gtag('event', 'download', { 'event_category': 'CV' })
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
@@ -97,7 +110,7 @@ const Contact = () => {
     {
       name: "LinkedIn",
       icon: <Linkedin size={24} />,
-      url: "https://linkedin.com/in/jaime-muñoz-lópez-barajas",
+      url: "https://www.linkedin.com/in/jaime-munoz-lopez-barajas2000/",
       color: "#0077B5"
     },
     {
@@ -197,7 +210,10 @@ const Contact = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.7, duration: 0.8 }}
               >
-                <button className="contact__cv-button">
+                <button 
+                  className="contact__cv-button"
+                  onClick={handleDownloadCV}
+                >
                   <Download size={20} />
                   Descargar CV
                 </button>

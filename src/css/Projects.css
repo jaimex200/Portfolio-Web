@@ -180,6 +180,7 @@
   height: 250px;
   overflow: hidden;
   background-color: var(--color-bg-tertiary);
+  z-index: 1;
 }
 
 .projects__card-image img {
@@ -187,6 +188,8 @@
   height: 100%;
   object-fit: cover;
   transition: transform var(--transition-slow);
+  position: relative;
+  z-index: 2;
 }
 
 .projects__card-overlay {
@@ -205,6 +208,8 @@
   justify-content: center;
   opacity: 0;
   transition: opacity var(--transition-normal);
+  z-index: 10;
+  pointer-events: none;
 }
 
 .projects__card:hover .projects__card-image img {
@@ -213,11 +218,15 @@
 
 .projects__card:hover .projects__card-overlay {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .projects__card-links {
   display: flex;
   gap: var(--spacing-md);
+  z-index: 15;
+  position: relative;
+  pointer-events: auto;
 }
 
 .projects__card-link {
@@ -232,12 +241,23 @@
   color: white;
   backdrop-filter: blur(10px);
   transition: all var(--transition-normal);
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 20;
+  position: relative;
+  pointer-events: auto;
 }
 
 .projects__card-link:hover {
   background-color: rgba(255, 255, 255, 0.3);
   border-color: rgba(255, 255, 255, 0.5);
   transform: scale(1.1);
+  color: white;
+}
+
+.projects__card-link:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
 }
 
 /* Card content */
