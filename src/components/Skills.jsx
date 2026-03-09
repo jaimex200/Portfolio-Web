@@ -33,15 +33,15 @@ const Skills = () => {
       ]
     },
     {
-      title: "Frontend & Full Stack",
+      title: "Data Engineering & ML",
       icon: <Brain size={24} />,
       skills: [
-        { name: "JavaScript", level: 75 },
-        { name: "React", level: 75 },
-        { name: "Node.js", level: 70 },
-        { name: "HTML/CSS", level: 75 },
-        { name: "REST APIs", level: 80 },
-        { name: "Database Design", level: 80 }
+        { name: "Pandas", level: 85 },
+        { name: "SQL", level: 90 },
+        { name: "TensorFlow", level: 80 },
+        { name: "Keras", level: 80 },
+        { name: "NumPy", level: 85 },
+        { name: "Machine Learning", level: 80 }
       ]
     }
   ]
