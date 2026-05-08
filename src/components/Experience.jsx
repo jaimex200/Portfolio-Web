@@ -81,7 +81,7 @@ const Experience = () => {
 
   const education = [
     {
-      title: "Grado en Ingeniería Informática",
+      title: "Ingeniero Técnico en Datos",
       institution: "Universidad Autónoma de Madrid",
       period: "Septiembre 2018 - Diciembre 2022",
       grade: "Media: 7.04",
